@@ -23,35 +23,36 @@
 <xmp style="display:none;">
 <br> 
 
-#### Week 1: Introduction 
+#### Week 4: Microcontroller Programming 
 
-###My ideas for a final project
+This week, we learned the basics of microcontroller programming, and I used what I learn to make a circuit that controls my cockroack elevator. I also built my cockroach elevator and made it work!
 
-For my final project, I want to explore my love of electronic music instruments and analog circuitry. I am very inspired by the beauty and power of electricity and its ubiquitous presence in our bodies and all around us. In my project, I want to collaborate with electricity and use it to create sound.
-
-Idea #1:
-The Harvard University Studio for Electroacoustic Composition houses a Buchla 100 series modular synthesizer. It is a precious instrument that I've had the privilege to work with for the past couple of years. One of the limitations of working with this particular synthesizer at HUSEAC is that the only module that would allow triggering notes via touch -- module 114, the Touch Controlled Voltage Source -- has been broken for several years. Buchla touch controllers are legendary because their design is unique and leads to new ways of composing music, and I've always wanted to work with one, but haven't been able to.
-My first idea is that I could build my own touch controller inspired by the Buchla module 114. It would be challenging to make a fully analog controller that could actually interface with the rest of the Buchla 100 at HUSEAC -- because it's so old and fragile, sending any innapropriate voltages could seriously damage it and that's a risk I cannot take. But I could learn from the design and schematics -- which are available online -- and build a cool controller that interacts with my own instruments.
+First, I measured and cut pieces of cardboard and glued them together. Instead of using a pulley system, like I thought I would in my sketch from last week, I decided to simply attach the motor directly to the rod that moves the platform up and down. I used heatshrink to tightly connect the rod to the motor and covered it with a straw. I built a little ledge for the motor to rest on, tied the platform to the rod with yarn, and made a tiny cardboard cockroach to sit on the platform.
 
 
+<img src="elevator.JPG" alt="Cockroach elevator" width="600" height="1000">
 
-<img src="buchla114module.jpg" alt="Buchla 114 Module" width="500" height="200">
+The next step was to design and build the circuit.
+I decided to use a very simple circuit, with one UP button and one DOWN button, implementing the pull-up resistor method. Here is a schematic for my circuit.
 
-Idea #2:
-My second idea is also musical, and it's to make my own contact mic. I was inspired by composer Kelley Sheehan, a graduate student in the Music Department, who inverted the polarity of a large speaker to turn it into a contact mic that she then integrated into her compositional environments and ensembles. Contact mics produce incredibly interesting sounds that I would love to use for musical purposes.
+<img src="schematic.JPG" alt="Elevator circuit schematic" width="1000" height="600">
 
-![image of contact mic](./contactmic.jpg)
+Additionally, though it's not shown in the schematic, pin3 of the Arduino is connected to A1A on the motor and pin4 of the Arduino is connected to A1B on the motor, in order to control the speed with Pulse Width Modulation and the direction of the elevator's movement. Here is a photo of the circuit.
 
+<img src="circuit.JPG" alt="Elevator circuit" width="600" height="1000">
 
+I adapted Nathan's code for running the motor with PWM and direction changes by adding lines that let the buttons control the up and down movement. Pin 10 on the Arduino reads whether the UP button is pressed, and Pin 11 reads whether the DOWN button is pressed.
 
-Idea #3:
-My third idea is to integrate both prior ideas and simply design and create my own electronic musical instrument. There's so much that I can do here -- not just touch control and contact mics -- but I could do all sorts of synthesizers with oscillators, filter, and amplifiers, and gather inspiration from DIY electronics communities online! 
+ <img src="elevatorcode1.JPG" alt="Elevator code part 1" width="600" height="1000">
 
-<img src="electricity.jpg" alt="image of electricity" width="500" height="200">
+ <img src="elevatorcode2.JPG" alt="Elevator code part 2" width="600" height="1000">
 
+I was so excited when I got my cockroach elevator to work!!!
 
-Because my interests lie especially in analog electronics, one of my challenges will be to find a way to include microcontroller programming in my project.
-
+<video width="1080" height="1920" autoplay muted>
+  <source src="elevator.MOV" type="video/mov">
+Your browser does not support the video tag.
+</video>
 
 
 
