@@ -31,9 +31,9 @@ But first, I started by following Nathan's basic tutorial for sensing with step-
 
 <img src="forcesensor.JPG" alt="Me with my force sensor" width="600" height="800">
 
-Then, to start getting to know piezo sensors , I used the Arduino example sketch Knock, which uses a piezo element to detect a knocking sound. The circuit is very basic -- here is a photo. 
+Then, to start getting to know piezo sensors , I used the Arduino example sketch Knock, which uses a piezo element to detect a knocking sound. The circuit is very basic -- with the piezo and a 1 MOhm resistor connect in parallel to pin A0 on the Arduino and to Ground. Interestingly, I learned that changing the value of the resistor affects the sensitivity of the sensor -- a greater resistance makes it more sensitive, and a smaller one makes it less sensitive.
 
-I did a very poor job of soldering the piezo to red and grey wires to extend them -- but at least I tried!
+I did a very poor job of soldering the piezo to red and grey wires to extend them -- but I was glad I did it because having longer wires made building the circuit much easier.
 
 <img src="knockcircuit.JPG" alt="Circuit for Arduino Knock sketch" width="600" height="800">
 
@@ -43,8 +43,16 @@ I did a very poor job of soldering the piezo to red and grey wires to extend the
 
 Then, I decided to try to use the same piezo sensor, except as an output, because I learned that they can be both inputs and outputs!
 
+The wiring was super simple -- I just connected my piezo to pin 8 of the Arduino and to ground. To make the piezo make sound, I used the Arduino example sketch toneMelody. The piezo became a little speaker!
 
+<img src="piezospeaker.JPG" alt="Circuit for the piezo as an output device" width="600" height="800">
 
+<video width="270" height="430" controls>
+  <source src="piezospeaker.MOV" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+The piezo component is probably my favorite electronic component I've ever encountered -- I love how sensitive it is when paired with a large resistor, and the fact that it can be used for both input and output functions.
 
 
 
