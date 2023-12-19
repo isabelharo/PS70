@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>PS70: Intro to Digital Fabrication </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div style="align-items: left; justify-content:left;" class="container-fluid">
+    <h3 class="nav-title"> PS70: Intro to Digital Fabrication</h3>
+    <div class="navbar-nav">
+      <h4></h4>
+      <h4><a class="nav-link" href="../index.html">Home</a></h4>
+      <h4><a class="nav-link" href="../about.html">About</a></h4>
+    </div>
+  </div>
+</nav>
+
+<body>
+
+
+<xmp style="display:none;">
+<br> 
+
+#### Some thoughts for what would've been my final project 
+
+Here is a sketch I made for what would've been my final project!
+
+My final idea was to make a contact microphone and capacitive touch controller that would interface with my existing Max patch for a voice instrument.
+
+<img src="plan.JPG" alt="A notebook sketch and brainstorm for my final project" width="600" height="800">
+
+Here is the Max patch that I want to interface with. I've previously used it with a regular voice mic. It has an input for sound and then several Freeze modules, which sample a moment of a sound and extend it indefinitely. Each is tuned to a different frequency. The button that says "no transpo" disables the Freeze modules off, and the one that says "chorus" enables them. The patch lets me make a layered drone sound that I use as a harmonic bedding for additional sounds.
+
+<img src="voicepatch.png" alt="Max patch for my voice with Freeze modules" width="1250" height="150">
+
+I would've used my contact mic as the input for the patch. My capacitive touch controller would've had the no transpo and chorus buttons, on/off buttons for each Freeze module, and sliders to control the volume of each frozen voice.
+
+I would've probably used a Max firmata to get my controller to communicate with the Max patch via an Arduino, a PCB and a 3D printed casing for the controller, and a store-bought audio interface to send audio from the contact mic into Max. I would've attached the contact mic to the necklace I 3D printed a few weeks ago.
+
+Hopefully I'll be able to make this in the future!
+
+
+</xmp>
+</body>
+
+<script src="../strapdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+</html>
